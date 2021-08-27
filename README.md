@@ -29,3 +29,5 @@
 
 - git mergetool -t meld
 
+- git rebase --abort
+
