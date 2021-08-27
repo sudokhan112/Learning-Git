@@ -24,3 +24,8 @@
 - git checkout master
 
 - git log --stat --summary
+
+- git rebase -i master
+
+- git mergetool -t meld
+
