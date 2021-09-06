@@ -34,8 +34,6 @@
 
 - git fetch --all
 
-- git checkout master
-
 - git log --stat --summary
 
 - git rebase -i master
@@ -105,5 +103,35 @@ You can reorder commits simply by changing their order in the UI (via dragging a
 You can choose to keep all commits or drop specific ones. When the dialog opens, each commit is set to be included by the pick button next to it being active. To drop a commit, toggle off its pick button.
 
 It is worth mentioning that in the real git interactive rebase you can do many more things like squashing (combining) commits, amending commit messages, and even editing the commits themselves. For our purposes though we will focus on these two operations above.
+
+- Here's another situation that happens quite commonly. You have some changes (newImage) and another set of changes (caption) that are related, so they are stacked on top of each other in your repository (aka one after another). The tricky thing is that sometimes you need to make a small modification to an earlier commit. In this case, design wants us to change the dimensions of newImage slightly, even though that commit is way back in our history!!
+
+![image14](https://user-images.githubusercontent.com/77024625/132261561-660d8a7f-309b-4c3b-8398-0454215625e6.png)
+
+`git rebase -i main` and change sequence of C2 and C3
+
+![image15](https://user-images.githubusercontent.com/77024625/132261641-83bc2ec3-fbbf-4ba0-abe2-d5dd00d5880b.png)
+
+![image16](https://user-images.githubusercontent.com/77024625/132261670-1efb565b-69d3-4cb5-9b3a-3373792eb0cc.png)
+
+`git commit --amend`
+
+![image17](https://user-images.githubusercontent.com/77024625/132261739-e8919c71-45d0-4f49-9bf5-156827efd1f9.png)
+
+`git rebase -i main` (to rechange location of C2 and C3)
+
+![image18](https://user-images.githubusercontent.com/77024625/132261780-88551c2f-12fa-4525-8adc-b9fe0d52f973.png)
+
+`git checkout master`
+
+`git merge caption`
+
+![image19](https://user-images.githubusercontent.com/77024625/132261843-711de17c-929a-4327-9d84-65cc61640b5e.png)
+
+
+
+
+
+
 
 
