@@ -50,6 +50,7 @@
 
 moves (by force) the main branch to three parents behind HEAD.
 ![im1](https://user-images.githubusercontent.com/77024625/132250798-475d3fb4-4c64-4a87-91a7-078cc968f24e.png)
-![im2](https://user-images.githubusercontent.com/77024625/132250876-0295d210-bab5-4117-9f9d-dc3c4a2f4c7b.png)
+/home/sayem/Pictures/Screenshots/Screenshot from 2021-09-06 12-59-09.png![image2](https://user-images.githubusercontent.com/77024625/132251127-dd8cecca-6933-4315-891f-a21c3de45b70.png)
+
 
 
