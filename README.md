@@ -52,4 +52,12 @@ moves (by force) the main branch to three parents behind HEAD.
 ![im1](https://user-images.githubusercontent.com/77024625/132250798-475d3fb4-4c64-4a87-91a7-078cc968f24e.png) ![im2](https://user-images.githubusercontent.com/77024625/132251127-dd8cecca-6933-4315-891f-a21c3de45b70.png)
 
 
+- `git rebase main`
+
+![im3](https://user-images.githubusercontent.com/77024625/132252982-ab4423ed-aab1-4b4c-81e7-f86490b942b9.png) ![im4](https://user-images.githubusercontent.com/77024625/132253065-54691a14-1c96-4d17-b808-ef7144e6f249.png)
+
+Now the work from our bugFix branch is right on top of main and we have a nice linear sequence of commits.Note that the commit C3 still exists somewhere. 
+Now to merge the main branch onto bugFix:
+
+![im5](https://user-images.githubusercontent.com/77024625/132253373-59d37aea-069d-423b-8fba-dd257d398105.png)
 
