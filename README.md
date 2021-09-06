@@ -49,8 +49,7 @@
 `git branch -f main HEAD~3`
 
 moves (by force) the main branch to three parents behind HEAD.
-![im1](https://user-images.githubusercontent.com/77024625/132250798-475d3fb4-4c64-4a87-91a7-078cc968f24e.png)
-/home/sayem/Pictures/Screenshots/Screenshot from 2021-09-06 12-59-09.png![image2](https://user-images.githubusercontent.com/77024625/132251127-dd8cecca-6933-4315-891f-a21c3de45b70.png)
+![im1](https://user-images.githubusercontent.com/77024625/132250798-475d3fb4-4c64-4a87-91a7-078cc968f24e.png) ![im2](https://user-images.githubusercontent.com/77024625/132251127-dd8cecca-6933-4315-891f-a21c3de45b70.png)
 
 
 
