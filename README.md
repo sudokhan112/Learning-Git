@@ -82,5 +82,20 @@ moving the bugFix branch to specific commit. `git branch -f bugFix HEAD~4`
 ![image9](https://user-images.githubusercontent.com/77024625/132255997-e0546926-5e3b-42d0-b477-3bf1458abb87.png)
 
 
+- `git reset` 
+
+![image10](https://user-images.githubusercontent.com/77024625/132257372-91b7b409-1294-4d80-b197-77675249fa42.png)
+
+- While resetting works great for local branches on your own machine, its method of "rewriting history" doesn't work for remote branches that others are using. `git revert`.
+
+![image11](https://user-images.githubusercontent.com/77024625/132257538-288337bb-d655-4a5d-adc5-21b7c0c17ab4.png)
+
+- `git cherrypick`
+
+![image12](https://user-images.githubusercontent.com/77024625/132258329-6d893790-7591-4f4c-b11c-2bb7ca5f86a0.png)
+
+That's it! We wanted commits C2 and C4 and git plopped them down right below us. Simple as that!
+
+![image13](https://user-images.githubusercontent.com/77024625/132258394-f8f961cd-c400-4d14-8094-decf2b7e4c44.png)
 
 
