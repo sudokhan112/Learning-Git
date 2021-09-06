@@ -1,7 +1,20 @@
 # git_notes
 
-- git reset src/*
+## Resources:
+**1. Happy Git and GitHub for the useR**(https://happygitwithr.com/)
 
+**2. Learn Git Branching** (https://learngitbranching.js.org/)
+
+**3. Git - the simple guide** (https://rogerdudler.github.io/git-guide/)
+
+**4. Oh,shit! Git?!** (https://ohshitgit.com/)
+
+
+
+
+#### Commands
+
+- git reset src/*
 
 - git pull --rebase
 
