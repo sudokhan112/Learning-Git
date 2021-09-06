@@ -90,12 +90,20 @@ moving the bugFix branch to specific commit. `git branch -f bugFix HEAD~4`
 
 ![image11](https://user-images.githubusercontent.com/77024625/132257538-288337bb-d655-4a5d-adc5-21b7c0c17ab4.png)
 
-- `git cherrypick`
+- `git cherry-pick`
 
 ![image12](https://user-images.githubusercontent.com/77024625/132258329-6d893790-7591-4f4c-b11c-2bb7ca5f86a0.png)
 
 That's it! We wanted commits C2 and C4 and git plopped them down right below us. Simple as that!
 
 ![image13](https://user-images.githubusercontent.com/77024625/132258394-f8f961cd-c400-4d14-8094-decf2b7e4c44.png)
+
+- When the `interactive rebase` dialog opens, you have the ability to do two things in our educational application:
+
+You can reorder commits simply by changing their order in the UI (via dragging and dropping with the mouse).
+
+You can choose to keep all commits or drop specific ones. When the dialog opens, each commit is set to be included by the pick button next to it being active. To drop a commit, toggle off its pick button.
+
+It is worth mentioning that in the real git interactive rebase you can do many more things like squashing (combining) commits, amending commit messages, and even editing the commits themselves. For our purposes though we will focus on these two operations above.
 
 
