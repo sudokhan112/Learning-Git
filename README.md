@@ -61,3 +61,26 @@ Now to merge the main branch onto bugFix:
 
 ![im5](https://user-images.githubusercontent.com/77024625/132253373-59d37aea-069d-423b-8fba-dd257d398105.png)
 
+- Relative commits are powerful, but we will introduce two simple ones here:
+
+Moving upwards one commit at a time with `^`.
+Moving upwards a number of times with `~<num>`.
+
+- ![im6](https://user-images.githubusercontent.com/77024625/132255553-8ccb2e7b-33e2-4528-a2b3-76859102a8dc.png)
+
+`git branch -f main HEAD~1`. force move the main branch 1 level up the current HEAD.
+
+![im7](https://user-images.githubusercontent.com/77024625/132255694-63d666de-69c4-4c44-8799-9eca9ff032c1.png)
+
+`git checkout main`
+
+`git merge C6`. merging main branch to a specific commit.
+
+![im8](https://user-images.githubusercontent.com/77024625/132255932-f6d6270e-79b4-40bf-b675-2a034b1f6440.png)
+
+moving the bugFix branch to specific commit. `git branch -f bugFix HEAD~4`
+![image9](https://user-images.githubusercontent.com/77024625/132255997-e0546926-5e3b-42d0-b477-3bf1458abb87.png)
+
+
+
+
