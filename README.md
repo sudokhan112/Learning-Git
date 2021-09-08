@@ -128,9 +128,53 @@ It is worth mentioning that in the real git interactive rebase you can do many m
 
 ![image19](https://user-images.githubusercontent.com/77024625/132261843-711de17c-929a-4327-9d84-65cc61640b5e.png)
 
+- Git tags support this exact use case -- they (somewhat) permanently mark certain commits as "milestones" that you can then reference like a branch. More importantly though, they never move as more commits are created. You can't "check out" a tag and then complete work on that tag -- tags exist as anchors in the commit tree that designate certain spots.
+
+![Screenshot from 2021-09-08 14-36-06](https://user-images.githubusercontent.com/77024625/132573889-b3f20a2d-2148-4f34-a7bd-f405975d24e8.png)
 
 
+- Because tags serve as such great "anchors" in the codebase, git has a command to describe where you are relative to the closest "anchor" (aka tag). And that command is called git describe!cGit describe takes the form of:
 
+`git describe <ref>`
+
+Where <ref> is anything git can resolve into a commit. If you don't specify a ref, git just uses where you're checked out right now (HEAD).
+
+The output of the command looks like:
+
+`<tag>_<numCommits>_g<hash>`
+
+Where tag is the closest ancestor tag in history, numCommits is how many commits away that tag is, and <hash> is the hash of the commit being described.
+  
+  
+![Screenshot from 2021-09-08 14-42-35](https://user-images.githubusercontent.com/77024625/132574779-9183c0bb-4215-46e5-9e07-27dcd0a24b9b.png)
+  
+ - Upper management is making this a bit trickier though -- they want the commits to all be in sequential order. So this means that our final tree should have C7' at the bottom, C6' above that, and so on, all in order.
+  
+  ![Screenshot from 2021-09-08 15-23-32](https://user-images.githubusercontent.com/77024625/132580092-9d2fea5b-0890-4d48-9b73-6e6af64ea8d5.png)
+
+  `git checkout bugFix`
+  `git rebase main`
+  
+  ![Screenshot from 2021-09-08 15-24-43](https://user-images.githubusercontent.com/77024625/132580256-36a239d4-0a7d-4ac2-87b2-205deddf40a5.png)
+
+  `git checkout C4`
+  `git rebase bugFix`
+  
+  ![Screenshot from 2021-09-08 15-26-37](https://user-images.githubusercontent.com/77024625/132580525-12c25526-cbf3-4db9-a164-3815ec5ed21a.png)
+
+   `git checkout C5`
+   `git rebase C4'`
+   `git checkout side`
+   `git rebase C5'`
+   `git checkout another`
+   `git rebase side`
+  
+  ![Screenshot from 2021-09-08 15-29-41](https://user-images.githubusercontent.com/77024625/132580876-7ae19cc2-60c1-4f6c-8ffd-934488efe4de.png)
+
+  `git checkout main`
+  `git merge another`
+
+  ![Screenshot from 2021-09-08 15-30-38](https://user-images.githubusercontent.com/77024625/132581004-b0bd1196-5610-4d67-8801-b70ef6d45529.png)
 
 
 
