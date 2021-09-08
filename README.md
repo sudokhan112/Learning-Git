@@ -177,5 +177,19 @@ Where tag is the closest ancestor tag in history, numCommits is how many commits
   ![Screenshot from 2021-09-08 15-30-38](https://user-images.githubusercontent.com/77024625/132581004-b0bd1196-5610-4d67-8801-b70ef6d45529.png)
 
 
+- Branch one needs a re-ordering of those commits and an exclusion/drop of C5. Branch two just needs a pure reordering of the commits, and three only needs one commit transferred!
+  
+  ![Screenshot from 2021-09-08 16-03-26](https://user-images.githubusercontent.com/77024625/132585266-ac087638-c998-403a-8807-8808c4b119cc.png)
+`git checkout one` 
+  `git cherry-pick C4 C3 C2`
+  
+  ![Screenshot from 2021-09-08 16-04-41](https://user-images.githubusercontent.com/77024625/132585409-eda70615-2d16-4979-a901-91c54b39e9c0.png)
+  
+`git checkout two` .
+  `git cherry-pick C5 C4 C3 C2`
+  
+  ![Screenshot from 2021-09-08 16-06-14](https://user-images.githubusercontent.com/77024625/132585591-9167c4ec-cc5e-4e98-ba77-185d00771773.png)
 
+`git branch - three C2`
+  ![Screenshot from 2021-09-08 16-07-16](https://user-images.githubusercontent.com/77024625/132585726-bca9b6af-feaf-4aa3-bf28-3838f408257d.png)
 
