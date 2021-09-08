@@ -190,6 +190,6 @@ Where tag is the closest ancestor tag in history, numCommits is how many commits
   
   ![Screenshot from 2021-09-08 16-06-14](https://user-images.githubusercontent.com/77024625/132585591-9167c4ec-cc5e-4e98-ba77-185d00771773.png)
 
-`git branch - three C2`
+`git branch -f three C2`
   ![Screenshot from 2021-09-08 16-07-16](https://user-images.githubusercontent.com/77024625/132585726-bca9b6af-feaf-4aa3-bf28-3838f408257d.png)
 
