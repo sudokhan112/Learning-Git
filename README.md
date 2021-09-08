@@ -42,6 +42,8 @@
 
 - git rebase --abort
 
+### Git Locals
+
 - One of the most common ways I use relative refs is to move branches around. You can directly reassign a branch to a commit with the -f option. So something like:
 
 `git branch -f main HEAD~3`
@@ -192,4 +194,9 @@ Where tag is the closest ancestor tag in history, numCommits is how many commits
 
 `git branch -f three C2`
   ![Screenshot from 2021-09-08 16-07-16](https://user-images.githubusercontent.com/77024625/132585726-bca9b6af-feaf-4aa3-bf28-3838f408257d.png)
+  
+
+  ### Git Remotes
+  
+  - Technically, `git clone` in the real world is the command you'll use to create local copies of remote repositories (from github for example). We use this command a bit differently in Learn Git Branching though -- git clone actually makes a remote repository out of your local one. Sure it's technically the opposite meaning of the real command, but it helps build the connection between cloning and remote repository work,
 
