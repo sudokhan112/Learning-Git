@@ -223,3 +223,11 @@ You'll notice that as we update our representation of the remote repository, our
 ![Screenshot from 2021-09-09 08-28-37](https://user-images.githubusercontent.com/77024625/132694705-820cba6f-b52d-4fb7-984f-ec624aca45aa.png)
 
 `git fetch` downloads commits/data for all the branches.
+  
+  - 
+  ![Screenshot from 2021-09-09 16-38-31](https://user-images.githubusercontent.com/77024625/132766083-debe58b1-476d-49dd-943f-1ab55be9588e.png)
+  ![Screenshot from 2021-09-09 16-41-31](https://user-images.githubusercontent.com/77024625/132766401-d747c018-ee4e-4914-9a34-79a8f7f37470.png)
+  ![Screenshot from 2021-09-09 16-46-44](https://user-images.githubusercontent.com/77024625/132766948-806dd428-58d0-4674-a75b-3a7c056c0748.png)
+
+
+
