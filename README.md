@@ -198,5 +198,28 @@ Where tag is the closest ancestor tag in history, numCommits is how many commits
 
   ### Git Remotes
   
-  - Technically, `git clone` in the real world is the command you'll use to create local copies of remote repositories (from github for example). We use this command a bit differently in Learn Git Branching though -- git clone actually makes a remote repository out of your local one. Sure it's technically the opposite meaning of the real command, but it helps build the connection between cloning and remote repository work,
+  - Technically, `git clone` in the real world is the command you'll use to create local copies of remote repositories (from github for example). We use this command a bit differently in Learn Git Branching though -- git clone actually makes a remote repository out of your local one. Sure it's technically the opposite meaning of the real command, but it helps build the connection between cloning and remote repository work.
+  
+  -  Well, remote branches also have a (required) naming convention -- they are displayed in the format of:
 
+`<remote name>/<branch name>`
+  
+Hence, if you look at a branch named o/main, the branch name is main and the name of the remote is o.
+
+Most developers actually name their main remote `origin`, not o. This is so common that git actually sets up your remote to be named origin when you git clone a repository.
+  
+  
+![Screenshot from 2021-09-09 08-17-09](https://user-images.githubusercontent.com/77024625/132692955-89c2258f-8e1b-416a-aa6d-5320371ffa38.png)
+
+  - In this lesson we will learn how to fetch data from a remote repository -- the command for this is conveniently named git fetch.
+You'll notice that as we update our representation of the remote repository, our remote branches will update to reflect that new representation. This ties into the previous lesson on remote branches.
+
+![Screenshot from 2021-09-09 08-22-02](https://user-images.githubusercontent.com/77024625/132693673-aaddb8be-7d32-44f4-aedc-febdb86ae862.png)
+
+  ![Screenshot from 2021-09-09 08-22-54](https://user-images.githubusercontent.com/77024625/132693787-eb36f177-9770-4483-93a7-1158ee2b5f7c.png)
+
+  ![Screenshot from 2021-09-09 08-27-21](https://user-images.githubusercontent.com/77024625/132694546-d8153bb3-2f97-4ede-9340-aafaa1cab2e9.png)
+  
+![Screenshot from 2021-09-09 08-28-37](https://user-images.githubusercontent.com/77024625/132694705-820cba6f-b52d-4fb7-984f-ec624aca45aa.png)
+
+`git fetch` downloads commits/data for all the branches.
