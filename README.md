@@ -242,3 +242,23 @@ You'll notice that as we update our representation of the remote repository, our
   ![Screenshot from 2021-09-17 14-00-54](https://user-images.githubusercontent.com/77024625/133840420-165c535f-eaae-4cfc-9668-69930910e92f.png)
 
   
+- `git push` is responsible for uploading your changes to a specified remote and updating that remote to incorporate your new commits. Once git push completes, all your friends can then download your work from the remote.
+  
+  - 
+Imagine you clone a repository on Monday and start dabbling on a side feature. By Friday you are ready to publish your feature -- but oh no! Your coworkers have written a bunch of code during the week that's made your feature out of date (and obsolete). They've also published these commits to the shared remote repository, so now your work is based on an old version of the project that's no longer relevant.
+
+In this case, the command git push is ambiguous. If you run git push, should git change the remote repository back to what it was on Monday? Should it try to add your code in while not removing the new code? Or should it totally ignore your changes since they are totally out of date?
+  
+  ![Screenshot from 2021-09-17 14-13-28](https://user-images.githubusercontent.com/77024625/133841721-dcffea15-ae3a-4ae5-a902-e34d0c03863f.png)
+  
+  `git pull --rebase`
+  `git push`
+  
+  ![Screenshot from 2021-09-17 14-18-27](https://user-images.githubusercontent.com/77024625/133842317-02425646-c00d-480c-98a3-d5516d03fa6b.png)
+  
+  But with `git pull` then `git push`
+  
+  ![Screenshot from 2021-09-17 14-20-34](https://user-images.githubusercontent.com/77024625/133842553-8ce71b90-d3df-4695-a790-8b05f25b3a01.png)
+
+
+  
