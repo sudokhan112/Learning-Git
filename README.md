@@ -229,5 +229,16 @@ You'll notice that as we update our representation of the remote repository, our
   ![Screenshot from 2021-09-09 16-41-31](https://user-images.githubusercontent.com/77024625/132766401-d747c018-ee4e-4914-9a34-79a8f7f37470.png)
   ![Screenshot from 2021-09-09 16-46-44](https://user-images.githubusercontent.com/77024625/132766948-806dd428-58d0-4674-a75b-3a7c056c0748.png)
 
+- updating remote branches
+  
+ ![Screenshot from 2021-09-17 13-58-59](https://user-images.githubusercontent.com/77024625/133840268-1509ae23-42af-44de-a5ff-2313529e2703.png)
+  
+  `git commit`
+  
+![Screenshot from 2021-09-17 13-59-56](https://user-images.githubusercontent.com/77024625/133840365-10d17ebc-20bb-4366-8053-a7089a007e7b.png)
 
+  `git pull`
+  
+  ![Screenshot from 2021-09-17 14-00-54](https://user-images.githubusercontent.com/77024625/133840420-165c535f-eaae-4cfc-9668-69930910e92f.png)
 
+  
