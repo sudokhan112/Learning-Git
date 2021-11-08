@@ -293,5 +293,11 @@ In this case, the command git push is ambiguous. If you run git push, should git
   ![b7cd2455-9dac-44f2](https://user-images.githubusercontent.com/77024625/140822360-b7cd2455-9dac-44f2-97f3-535ec6e00443.png)
 
 
-  
+ Easier way to complete this:
+  - `git fetch` (fetch C8 from remote and point o/main to C8)
+  - `git rebase o/main side1` (rebase side1 on top of o/main)
+  - `git rebase side1 side2`
+  - `git rebase side2 side3`
+  - `git rebase side3 main`
+  - `git push`
 
