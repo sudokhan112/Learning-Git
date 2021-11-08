@@ -329,3 +329,40 @@ $ git merge side3
 $ git push
   ```
 ![54394822-ffae](https://user-images.githubusercontent.com/77024625/140826431-54394822-ffae-4b91-b4b0-24972301b446.png)
+  
+- You can make any arbitrary branch track o/main, and if you do so, that branch will have the same implied push destination and merge target as main. This means you can run git push on a branch named totallyNotMain and have your work pushed to the main branch on the remote!
+
+There are two ways to set this property. The first is to checkout a new branch by using a remote branch as the specified ref. Running
+
+`git checkout -b totallyNotMain o/main`
+
+Creates a new branch named totallyNotMain and sets it to track o/main.
+  
+![41d8-4fe8-9844](https://user-images.githubusercontent.com/77024625/140827110-ad3de2a0-41d8-4fe8-9844-a95e9429ce26.png)
+
+
+Another way to set remote tracking on a branch is to simply use the git branch -u option. Running
+
+`git branch -u o/main foo`
+
+will set the foo branch to track o/main. If foo is currently checked out you can even leave it off:
+
+`git branch -u o/main`
+  
+**Input**
+  
+![2e5094fb-5d1d](https://user-images.githubusercontent.com/77024625/140828320-2e5094fb-5d1d-42fb-b82d-b4f75c1b9fe3.png)
+
+**Output**
+
+![ab65-468c-be69](https://user-images.githubusercontent.com/77024625/140828442-41d2c46b-ab65-468c-be69-58a19f01444b.png)
+  
+```
+$ git checkout -b side
+$ git commit
+$ git branch -u o/main
+$ git fetch
+$ git rebase o/main
+$ git push
+```
+  
