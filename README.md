@@ -301,3 +301,31 @@ In this case, the command git push is ambiguous. If you run git push, should git
   - `git rebase side3 main`
   - `git push`
 
+**Rebase vs. Merge**
+  
+ There's a lot of debate about the tradeoffs between merging and rebasing in the development community. Here are the general pros / cons of rebasing:
+
+Pros:
+
+Rebasing makes your commit tree look very clean since everything is in a straight line
+  
+Cons:
+
+Rebasing modifies the (apparent) history of the commit tree.
+For example, commit C1 can be rebased past C3. It then appears that the work for C1' came after C3 when in reality it was completed beforehand.
+
+Some developers love to preserve history and thus prefer merging. Others (like myself) prefer having a clean commit tree and prefer rebasing. It all comes down to preferences.
+  
+- We can do the above mentioned problem but with `git merge`
+```
+$ git fetch
+$ git checkout main
+$ git pull
+$ git merge side1
+$ git push
+$ git merge side2
+$ git push
+$ git merge side3
+$ git push
+  ```
+![54394822-ffae](https://user-images.githubusercontent.com/77024625/140826431-54394822-ffae-4b91-b4b0-24972301b446.png)
