@@ -12,7 +12,7 @@
 
 
 
-#### Commands
+#### Some useful Commands
 
 - git reset src/*
 
@@ -260,5 +260,38 @@ In this case, the command git push is ambiguous. If you run git push, should git
   
   ![Screenshot from 2021-09-17 14-20-34](https://user-images.githubusercontent.com/77024625/133842553-8ce71b90-d3df-4695-a790-8b05f25b3a01.png)
 
+- Next Topic:
+  
+  ![140814368-22a70033-78a2-4349-9bd6-e7e6cd1338a2](https://user-images.githubusercontent.com/77024625/140814368-22a70033-78a2-4349-9bd6-e7e6cd1338a2.png)
+
+**Input** 
+  
+  ![7fe192f6-fe2f-4ca0-865e](https://user-images.githubusercontent.com/77024625/140820533-7fe192f6-fe2f-4ca0-865e-7cc038aec46e.png)
+  
+ **Output**
+  
+  ![d80950e7-33ee-43da-a7bd](https://user-images.githubusercontent.com/77024625/140820627-d80950e7-33ee-43da-a7bd-3e4dc3ff00bc.png)
+
+  step 1: `git checkout main; git pull --rebase`
+  
+  ![abbf1438-c346-4151](https://user-images.githubusercontent.com/77024625/140821043-abbf1438-c346-4151-88e5-afcb57dfb35c.png)
+
+  step 2: `git checkout side1; git rebase main`
+  
+  ![6b28a044-6053](https://user-images.githubusercontent.com/77024625/140821316-6b28a044-6053-497c-9663-787521497425.png)
+  
+  step 3: `git checkout main; git rebase side1; git push`
+  
+  ![89aa44b73-f3ef](https://user-images.githubusercontent.com/77024625/140821774-9aa44b73-f3ef-48e3-96f9-8be7fac5f472.png)
+  
+  step 5: (we can also use cherry-pick) `git cherry-pick C3 C4; git push`
+
+  ![220a-4db6-8df3-](https://user-images.githubusercontent.com/77024625/140822038-fc315561-220a-4db6-8df3-248a50fcd0c2.png)
+  
+  step 6: `git cherry-pick C5 C6 C7; git push`
+  
+  ![b7cd2455-9dac-44f2](https://user-images.githubusercontent.com/77024625/140822360-b7cd2455-9dac-44f2-97f3-535ec6e00443.png)
+
 
   
+
