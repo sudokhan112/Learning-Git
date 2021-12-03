@@ -394,3 +394,23 @@ Keep in mind that since we told git everything it needs to know (by specifying b
   git push origin foo
 ```
   
+You might then be wondering -- what if we wanted the source and destination to be different? What if you wanted to push commits from the foo branch locally onto the bar branch on remote? n order to specify both the source and the destination of <place>, simply join the two together with a colon:
+
+`git push origin <source>:<destination>`
+
+This is commonly referred to as a colon refspec. Refspec is just a fancy name for a location that git can figure out (like the branch foo or even just HEAD~1).
+  
+![b0c18c2c](https://user-images.githubusercontent.com/77024625/144616026-b0c18c2c-92bf-4bcf-9961-f817bafc67f9.png)
+  
+![4ce55968](https://user-images.githubusercontent.com/77024625/144616135-4ce55968-9209-440b-8cc8-efb828b973b9.png)
+  
+**Input**
+  
+ ![585e11af](https://user-images.githubusercontent.com/77024625/144616268-585e11af-1ffa-46ab-9f2d-8d7f2c8678b3.png)
+  
+ **Output**
+  
+![70d18b4d](https://user-images.githubusercontent.com/77024625/144616347-70d18b4d-5b99-4aee-959a-bd8d8b1258b0.png)
+
+
+
