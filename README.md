@@ -365,4 +365,32 @@ $ git fetch
 $ git rebase o/main
 $ git push
 ```
+
+  
+**Git push**
+  
+git push can optionally take arguments in the form of:
+
+`git push <remote> <place>`
+ Ex: `git push origin main`
+ 
+translates to this in English:
+
+*Go to the branch named "main" in my repository, grab all the commits, and then go to the branch "main" on the remote named "origin". Place whatever commits are missing on that branch and then tell me when you're done.*
+  
+By specifying main as the "place" argument, we told git where the commits will come from and where the commits will go. It's essentially the "place" or "location" to synchronize between the two repositories.
+Keep in mind that since we told git everything it needs to know (by specifying both arguments), it totally ignores where we are checked out!
+
+**Input**
+  
+  ![fe25a8e8](https://user-images.githubusercontent.com/77024625/144614214-fe25a8e8-a8ba-4fd6-907c-fc1b559a575e.png)
+
+**Output**
+  
+  ![59a69ad2](https://user-images.githubusercontent.com/77024625/144614333-59a69ad2-2d02-4d11-97bc-595ee16b7c2a.png)
+
+```
+  git push origin main
+  git push origin foo
+```
   
