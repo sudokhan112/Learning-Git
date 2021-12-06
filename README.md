@@ -413,4 +413,10 @@ This is commonly referred to as a colon refspec. Refspec is just a fancy name fo
 ![70d18b4d](https://user-images.githubusercontent.com/77024625/144616347-70d18b4d-5b99-4aee-959a-bd8d8b1258b0.png)
 
 
+step 1: `git push origin foo:main`
+  
+![bdb5bae0](https://user-images.githubusercontent.com/77024625/144870422-bdb5bae0-d223-4ad3-94d8-8e8a1fa51bcd.png)
 
+step 2: `git push origin main^:foo`
+  
+Solved!
