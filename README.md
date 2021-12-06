@@ -11,37 +11,6 @@
 
 
 
-
-#### Some useful Commands
-
-- git reset src/*
-
-- git pull --rebase
-
-- git log --oneline --graph --all
-
-- git submodule update --init --recursive
-
-- git submodule sync
-
-- git remote get-url origin
-
-- cat .gitmodules 
-
-- git submodule update --init --recursive --remote
-
-- git remote -v
-
-- git fetch --all
-
-- git log --stat --summary
-
-- git rebase -i master
-
-- git mergetool -t meld
-
-- git rebase --abort
-
 ### Git Locals
 
 - One of the most common ways I use relative refs is to move branches around. You can directly reassign a branch to a commit with the -f option. So something like:
@@ -367,7 +336,7 @@ $ git push
 ```
 
   
-**Git push**
+#### Git push
   
 git push can optionally take arguments in the form of:
 
@@ -420,3 +389,31 @@ step 1: `git push origin foo:main`
 step 2: `git push origin main^:foo`
   
 Solved!
+
+
+  
+#### Git Fetch
+The arguments for git fetch are actually very, very similar to those for git push. It's the same type of concepts but just applied in the opposite direction (since now you are downloading commits rather than uploading).
+  
+If you specify a place with git fetch like in the following command:
+
+`git fetch origin foo`
+
+Git will go to the `foo` branch on the remote, grab all the commits that aren't present locally, and then plop them down onto the `o/foo` branch locally.
+  
+You might be wondering -- why did git plop those commits onto the `o/foo` remote branch rather than just plopping them onto my local foo branch? I thought the <place> parameter is a place that exists both locally and on the remote?
+
+Well git makes a special exception in this case because you might have work on the `foo` branch that you don't want to mess up!! This ties into the earlier lesson on `git fetch` -- it doesn't update your local non-remote branches, it only downloads the commits (so you can inspect / merge them later).
+  
+"Well in that case, what happens if I explicitly define both the source and destination with `<source>:<destination>`?"
+
+If you feel passionate enough to fetch commits directly onto a local branch, then yes you can specify that with a colon refspec. You can't fetch commits onto a branch that is checked out, but otherwise git will allow this.
+
+Here is the only catch though -- <source> is now a place on the remote and <destination> is a local place to put those commits. It's the exact opposite of git push, and that makes sense since we are transferring data in the opposite direction!
+
+That being said, developers rarely do this in practice. I'm introducing it mainly as a way to conceptualize how fetch and push are quite similar, just in opposite directions.
+  
+![d349e918](https://user-images.githubusercontent.com/77024625/144874768-d349e918-0003-45eb-8f19-9359e9bb6f2f.png)
+  
+![6a5f7ca2](https://user-images.githubusercontent.com/77024625/144875026-6a5f7ca2-41f0-4e8b-ab08-b7082219c9a2.png)
+
