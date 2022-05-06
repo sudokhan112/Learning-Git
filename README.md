@@ -417,3 +417,18 @@ That being said, developers rarely do this in practice. I'm introducing it mainl
   
 ![6a5f7ca2](https://user-images.githubusercontent.com/77024625/144875026-6a5f7ca2-41f0-4e8b-ab08-b7082219c9a2.png)
 
+
+  **Want to squash commits before merge request**
+
+ This will create a interactive rebase against `master` branch.
+  
+`naz@pop-os ~/git-cloned-repos/psf-vsn/sources/row-guidance (naz/save-data-csv) `
+ 
+`$ git rebase -i origin/master`
+  
+ Then you pick all the commits that you want to squash as `s` and leave the commit
+ as `pick` where you want to squash all the commits.
+  
+ Then you have to force push the new commits on your branch at `origin`
+ 
+ ` $ git push -f origin naz/save-data-csv `
