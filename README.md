@@ -1,4 +1,4 @@
-# git_notes
+
 
 ## Resources:
 **1. Happy Git and GitHub for the useR**(https://happygitwithr.com/)
