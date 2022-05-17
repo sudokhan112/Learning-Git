@@ -417,6 +417,44 @@ That being said, developers rarely do this in practice. I'm introducing it mainl
   
 ![6a5f7ca2](https://user-images.githubusercontent.com/77024625/144875026-6a5f7ca2-41f0-4e8b-ab08-b7082219c9a2.png)
 
+ **Git Alias**
+  
+Edit ~/.gitconfig to add these useful developer shortcuts.
+
+```
+[core]
+	editor = code --wait
+[alias]
+	co = checkout
+	cob = checkout -b
+	cp = cherry-pick
+	go = clone --recurse-submodules -j8
+	kill = branch -D
+	last = log -1 HEAD
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --pretty=oneline --graph --name-status
+	pr = !git fetch --all --prune && git prune && git remote prune origin
+	spull = !git fetch --all && git pull --rebase && git submodule sync --recursive && git submodule update --init --recursive
+	spush = push --recurse-submodules=on-demand
+	sup = submodule update --recursive --init
+	sync = !git fetch --all && git pull --rebase origin master
+	undo = reset HEAD~1 --mixed
+	unstage = reset HEAD --
+	wipe = clean -Xfd
+	amend = commit --amend
+[diff]
+	submodule = log
+[fetch]
+	recurseSubmodules = on-demand
+[init]
+	templatedir = ~/.git-templates
+[pull]
+	rebase = true
+[status]
+	submoduleSummary = true
+[rerere]
+	enabled = true
+```
 
   **Want to squash commits before merge request**
 
