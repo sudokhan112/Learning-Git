@@ -463,6 +463,10 @@ Edit ~/.gitconfig to add these useful developer shortcuts.
 `naz@pop-os ~/git-cloned-repos/psf-vsn/sources/row-guidance (naz/save-data-csv) `
  
 `$ git rebase -i origin/master`
+
+Or you can do interactive rebase against a specific commit:
+	
+`$ git rebase -i commit-hash`
   
  Then you pick all the commits that you want to squash as `s` and leave the commit
  as `pick` where you want to squash all the commits.
