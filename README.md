@@ -478,3 +478,26 @@ Manually do `accept incoming change` or `accept current change` if git can't fig
  Then you have to force push the new commits on your branch at `origin`
  
  ` $ git push -f origin naz/save-data-csv `
+	
+
+**Messed Something Up!**
+
+`git reflog`
+
+This will show all the changes made with commit. Find the commit hash where you were correct. Then
+
+`$ git checkout commit-hash -b backup/dar/naz`
+	
+This will create a new branch named backup/dar/naz with the commit where you were correct. Delete the branch where you messed up.
+
+`git kill messed-up-branch`
+	
+Now, you want to change the name of the current branch (backup/dar/naz) into old brach(messed-up-branch), because old branch is probably pushed to origin and you want to follow that that or keep comments of merge request. 
+	
+Be on your current branch and rename it to old branch:
+	
+`git branch -m messed-up-branch`
+	
+Then force push this branch to origin where the original branch was:
+
+`git push -f origin dar/naz-branch-thread-MA-4918-backup`
