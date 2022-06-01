@@ -470,6 +470,10 @@ Or you can do interactive rebase against a specific commit:
   
  Then you pick all the commits that you want to squash as `s` and leave the commit
  as `pick` where you want to squash all the commits.
+
+Manually do `accept incoming change` or `accept current change` if git can't figure out which one to accept. Then:
+	
+`git rebase --continue`
   
  Then you have to force push the new commits on your branch at `origin`
  
