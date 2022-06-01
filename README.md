@@ -500,4 +500,4 @@ Be on your current branch and rename it to old branch:
 	
 Then force push this branch to origin where the original branch was:
 
-`git push -f origin dar/naz-branch-thread-MA-4918-backup`
+`git push -f origin messed-up-branch`
